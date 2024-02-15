@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.14.0/font/bootstrap-icons.css">
+    <script src="file.js"></script>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(annie-spratt-5cFwQ-WMcJU-unsplash.jpg) fixed center;
+            background-size: cover;
+            filter: blur(5px); 
+            z-index: -1;
+        }
+
+        #main {
+            position: relative;
+            z-index: 1;
+            width: 500px;
+            margin: 120px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 20px;
+        }
+
+        #search-form {
+            display: flex;
+        }
+
+        #form-control {
+            flex: 1;
+            width: 80%;
+            border: none;
+            border-bottom: 4px solid rgb(0, 0, 0);
+            margin-right: 10px;
+            padding: 5px;
+        }
+
+        #form-control:focus {
+            outline: none;
+        }
+
+        #search-btn {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #search-btn:hover {
+            background-color: rgb(88, 88, 88);
+        }
+
+        #icon {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="background-container"></div>
+
+    <div id="main">
+        <form id="search-form">
+            <input type="text" placeholder="Enter Word" id="input">
+           <input type="button" value="Search" onclick="change()"> 
+        </form>
+
+        <h3>Word:</h3>
+        <p></p>
+        <hr>
+        <h3>Meaning:</h3>
+        <p></p>
+        <hr>
+        <h3>Definition:</h3>
+        <p></p>
+    </div>
+
+   
+</body>
+</html>
